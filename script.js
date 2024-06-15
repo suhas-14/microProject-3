@@ -1,0 +1,3 @@
+getElementById("btn-del") = () => {
+    
+}
