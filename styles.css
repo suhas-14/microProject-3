@@ -33,18 +33,21 @@ p {
 }
 
 .output > #output-inner {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 40px;
   height: 60px;
   width: 390px;
-  /* border-style: none; */
+  border-style: none;
   border-radius: 12px;
   background-color: #181f32;
+  color: white;
+  text-align: right;
+  font-size: 32px;
 }
 
 #btn-reset,
 #btn-result {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   grid-column: span 2;
   text-align: center;
   align-items: center;
@@ -76,20 +79,22 @@ p {
   grid-template-columns: repeat(4, 1fr);
   height: 250px;
   border: 2px solid yellow;
-  padding: 12px;
+  /* padding: 12px; */
   align-items: center;
   text-align: center;
+  place-items: center;
 }
 
 .container > .num-inner {
-  height: 30px;
-  width: 80px;
+  height: 40px;
+  width: 70px;
   border-radius: 12px;
   background-color: #eae3db;
 }
 
 .num-inner > #btn-reset {
-  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .num > .container > div {
@@ -102,6 +107,13 @@ p {
   font-weight: 500;
   line-height: 36.31px;
   text-align: center;
+  align-items: center;
   background: #3B4664;
-
+  /* border: 2px dashed red; */
+  /* padding: 10px; */
 }
+
+.num-inner {
+  cursor: pointer;
+}
+
