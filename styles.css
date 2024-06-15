@@ -48,15 +48,29 @@ p {
 #btn-reset,
 #btn-result {
   /* border: 2px solid red; */
-  grid-column: span 2;
+  /* grid-column */
   text-align: center;
   align-items: center;
+}
+
+#btn-reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 80%;
+}
+
+#btn-result {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  width: 80%;
 }
 
 #btn-del,
 #btn-reset {
   background: #647299;
   color: white;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 #btn-result {
@@ -66,7 +80,6 @@ p {
 
 .num {
   margin-top: 30px;
-  /* border: 2px dashed red; */
   border-radius: 12px;
   padding: 40px;
   width: 400px;
@@ -78,8 +91,6 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: 250px;
-  border: 2px solid yellow;
-  /* padding: 12px; */
   align-items: center;
   text-align: center;
   place-items: center;
@@ -97,10 +108,6 @@ p {
   grid-column-end: 3;
 }
 
-.num > .container > div {
-  gap: 20px;
-}
-
 .num-inner {
   font-family: Inter;
   font-size: 20px;
@@ -109,11 +116,8 @@ p {
   text-align: center;
   align-items: center;
   background: #3B4664;
-  /* border: 2px dashed red; */
-  /* padding: 10px; */
-}
-
-.num-inner {
   cursor: pointer;
 }
+
+
 
