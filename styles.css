@@ -20,7 +20,6 @@ p {
 }
 
 .output {
-  /* border: 2px solid red; */
   width: 480px;
   height: 142.73px;
   top: 194px;
@@ -33,7 +32,6 @@ p {
 }
 
 .output > #output-inner {
-  /* border: 2px solid red; */
   margin: 40px;
   height: 60px;
   width: 390px;
@@ -47,8 +45,6 @@ p {
 
 #btn-reset,
 #btn-result {
-  /* border: 2px solid red; */
-  /* grid-column */
   text-align: center;
   align-items: center;
 }
@@ -101,11 +97,6 @@ p {
   width: 70px;
   border-radius: 12px;
   background-color: #eae3db;
-}
-
-.num-inner > #btn-reset {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 .num-inner {
