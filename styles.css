@@ -52,13 +52,13 @@ p {
 #btn-reset {
   grid-column-start: 1;
   grid-column-end: 3;
-  width: 80%;
+  width: 85%;
 }
 
 #btn-result {
   grid-column-start: 3;
   grid-column-end: 5;
-  width: 80%;
+  width: 85%;
 }
 
 #btn-del,
