@@ -32,7 +32,6 @@ function appendToOutput(val) {
 
 function setOperator(op) {
   prevVal = currentVal;
-  console.log(prevVal);
   currentVal = "";
   operator = op;
 }
@@ -74,3 +73,4 @@ function deleteLastChar() {
 function isOperator(val) {
   return val === "+" || val === "-" || val === "x" || val === "/";
 }
+
