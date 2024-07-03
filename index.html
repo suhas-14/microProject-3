@@ -10,31 +10,32 @@
 
 <body>
     <div class="container">
-        <p>Calc</p>
+        <p>Calculator</p>
         <div class="output">
-            <input type="number" id="output-inner" readonly/>
+            <input type="text" id="output-inner" readonly/>
         </div>
         <div class="num">
             <div class="container">
-                <div class="num-inner">7</div>
-                <div class="num-inner">8</div>
-                <div class="num-inner">9</div>
-                <div class="num-inner" id="btn-del">Del</div>
-                <div class="num-inner">4</div>
-                <div class="num-inner">5</div>
-                <div class="num-inner">6</div>
-                <div class="num-inner">+</div>
-                <div class="num-inner">1</div>
-                <div class="num-inner">2</div>
-                <div class="num-inner">3</div>
-                <div class="num-inner">-</div>
-                <div class="num-inner">.</div>
-                <div class="num-inner">0</div>
-                <div class="num-inner">/</div>
-                <div class="num-inner">x</div>
-                <div class="num-inner" id="btn-reset">RESET</div>
-                <div class="num-inner" id="btn-result">=</div>
+                <button class="num-inner" onclick="getInput('7')">7</button>
+                <button class="num-inner" onclick="getInput('8')">8</button>
+                <button class="num-inner" onclick="getInput('9')">9</button>
+                <button class="num-inner" onclick="delHandler()" id="btn-del">Del</button>
+                <button class="num-inner" onclick="getInput('4')">4</button>
+                <button class="num-inner" onclick="getInput('5')">5</button>
+                <button class="num-inner" onclick="getInput('6')">6</button>
+                <button class="num-inner" onclick="getInput('+')">+</button>
+                <button class="num-inner" onclick="getInput('1')">1</button>
+                <button class="num-inner" onclick="getInput('2')">2</button>
+                <button class="num-inner" onclick="getInput('3')">3</button>
+                <button class="num-inner" onclick="getInput('-')">-</button>
+                <button class="num-inner" onclick="getInput('.')">.</button>
+                <button class="num-inner" onclick="getInput('0')">0</button>
+                <button class="num-inner" onclick="getInput('/')">/</button>
+                <button class="num-inner" onclick="getInput('x')">x</button>
+                <button class="num-inner" onclick="resetHandler()" id="btn-reset">RESET</button>
+                <button class="num-inner" onclick="result()" id="btn-result">=</button>
             </div>
+
         </div>
     </div>
     <script src="./script.js"></script>

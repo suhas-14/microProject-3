@@ -1,76 +1,128 @@
-let output = document.getElementById("output-inner");
-let currentVal = "";
-let prevVal = "";
-let operator = "";
+var display = document.getElementById("output-inner");
 
-document.querySelectorAll(".num-inner").forEach((button) => {
-  button.addEventListener("click", (e) => {
-    let buttonText = e.target.textContent;
-
-    if (buttonText === "=") {
-      calculate();
-    } else if (buttonText === "RESET") {
-      reset();
-    } else if (buttonText === "Del") {
-      deleteLastChar();
-    } else if (isOperator(buttonText)) {
-      if (currentVal === "") {
-        alert("Please select a number first");
-      } else {
-        setOperator(buttonText);
-      }
-    } else {
-      appendToOutput(buttonText);
+function getInput(value) {
+    // console.log("Number/operators keys clicked");
+    var userInput = value;
+    
+    if(display.value && display.value.slice(-1) === '.') {
+        if (value === ".") {
+            return;
+        }
     }
-  });
-});
 
-function appendToOutput(val) {
-  currentVal += val;
-  output.value = currentVal;
+    display.value += userInput;
 }
 
-function setOperator(op) {
-  prevVal = currentVal;
-  currentVal = "";
-  operator = op;
+function isOperator(userInput) {
+    return userInput === "+" || userInput === "-" || userInput === "x" || userInput === "/";
 }
 
-function calculate() {
-  let result = 0;
-
-  switch (operator) {
-    case "+":
-      result = parseFloat(prevVal) + parseFloat(currentVal);
-      break;
-    case "-":
-      result = parseFloat(prevVal) - parseFloat(currentVal);
-      break;
-    case "x":
-      result = parseFloat(prevVal) * parseFloat(currentVal);
-      break;
-    case "/":
-      result = parseFloat(prevVal) / parseFloat(currentVal);
-      break;
-  }
-
-  currentVal = result.toString();
-  output.value = currentVal;
+function delHandler() {
+    // console.log("Delete button clicked");
+    currentVal = display.value;
+    if (currentVal === "") {
+        alert("Nothing to delete")
+    }
+    else {
+        display.value = display.value.slice(0, -1);
+    }
 }
 
-function reset() {
-  currentVal = "";
-  prevVal = "";
-  operator = "";
-  output.value = currentVal;
+function resetHandler() {
+    // console.log("Reset button clicked")
+    currentVal = display.value
+    if (currentVal === "") {
+        alert("Nothing to clear");
+    }
+    else {
+        display.value = "";
+    }
 }
 
-function deleteLastChar() {
-  currentVal = currentVal.slice(0, -1);
-  output.value = currentVal;
+function result() {
+    // console.log("Result button clicked")
+    currentVal = display.value;
+    if (currentVal === "") {
+        alert("Nothing to evaluate");
+    }
+    else {
+        try{
+            display.value = eval(currentVal);
+        }
+        catch(err) {
+            alert("Invalid Input");
+        }
+    }
 }
 
-function isOperator(val) {
-  return val === "+" || val === "-" || val === "x" || val === "/";
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const display = document.getElementById("output-inner")
+
+// function appendToDisplay(input) {
+//     display.value += input;
+// }
+
+// function clear() {
+//     // display.value = ""
+// }
+
+// function reset() {
+//     display.value = ""
+// }
+
+// function result() {
+//     try {
+//         display.value = eval(display.value)
+//     } catch (error) {
+//         display.value = alert("You have not selected a number!")
+//     }
+// }

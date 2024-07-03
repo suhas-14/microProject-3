@@ -1,4 +1,4 @@
-body {
+ body {
   background-color: #3b4664;
   display: flex;
   justify-content: center;
@@ -42,7 +42,6 @@ p {
   color: white;
   text-align: right;
   font-size: 32px;
-  /* border: 2px solid red; */
 }
 
 #btn-reset,
@@ -71,14 +70,24 @@ p {
   font-size: 18px;
 }
 
-#btn-del,
+#btn-del:hover {
+  background: #fff;
+  color:#647299; 
+}
+
 #btn-reset:hover {
-  opacity: 3px;
+  background: #fff;
+  color: #647299;
 }
 
 #btn-result {
   background: #d13f30;
   color: white;
+}
+
+#btn-result:hover{
+  color: #d13f30;
+  background: #fff;
 }
 
 .num {
@@ -101,9 +110,10 @@ p {
 
 .container > .num-inner {
   height: 40px;
-  width: 70px;
+  width: 75px;
   border-radius: 12px;
   background-color: #eae3db;
+  color: #647299;
 }
 
 .num-inner {
@@ -118,9 +128,7 @@ p {
 }
 
 .num-inner:hover {
-  background: #737e9c;
-  opacity: 5px;
+  background: #647299;
+  color: #fff;
 }
-
-
 
