@@ -1,7 +1,6 @@
 var display = document.getElementById("output-inner");
 
 function getInput(value) {
-    // console.log("Number/operators keys clicked");
     var userInput = value;
     
     if(display.value && display.value.slice(-1) === '.') {
@@ -22,7 +21,6 @@ function isOperator(userInput) {
 }
 
 function delHandler() {
-    // console.log("Delete button clicked");
     currentVal = display.value;
     if (currentVal === "") {
         alert("Nothing to delete")
@@ -33,7 +31,6 @@ function delHandler() {
 }
 
 function resetHandler() {
-    // console.log("Reset button clicked")
     currentVal = display.value
     if (currentVal === "") {
         alert("Nothing to clear");
@@ -44,7 +41,6 @@ function resetHandler() {
 }
 
 function result() {
-    // console.log("Result button clicked")
     currentVal = display.value;
     if (currentVal === "") {
         alert("Nothing to evaluate");
@@ -58,5 +54,4 @@ function result() {
         }
     }
 }
-
 
