@@ -10,6 +10,10 @@ function getInput(value) {
         }
     }
 
+    if(userInput === 'x') {
+        userInput = '*'
+    }
+
     display.value += userInput;
 }
 
